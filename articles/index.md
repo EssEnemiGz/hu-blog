@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Acerca de"
-permalink: /hu-blog
+title: "Acerca del blog - Indice"
+date: 09-03-2025
 ---
 
 # HackingUtils.c
