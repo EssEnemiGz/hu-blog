@@ -5,7 +5,7 @@
 * Conocimientos básicos de Markdown.
 * Conocimientos básicos de Git y GitHub.
 
-## Pasos para Colaborar
+> **TIP** Pasos para Colaborar
 
 1.  **Haz un fork del Repositorio:**
 
@@ -47,5 +47,5 @@
 
 8.  **Espera la Revisión:**
 
-## Nota
+> **INFO** Nota
 Por favor, hacer un pull request por artículo, para que los administradores puedan tener un mejor control sobre lo que se publica.
