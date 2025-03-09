@@ -26,18 +26,33 @@ jobs:
           ruby-version: '3.2.2'
           bundler-cache: true
       - name: Clean bundler cache
-        run: bundle clean --force
+        run: |
+          echo "Limpiando el caché de Bundler..."
+          bundle clean --force
+          echo "Caché de Bundler limpiado."
       - name: Install Jekyll
-        run: bundle install
+        run: |
+          echo "Instalando Jekyll..."
+          bundle install
+          echo "Jekyll instalado."
       - name: Build with Jekyll
-        run: bundle exec jekyll build
+        run: |
+          echo "Construyendo con Jekyll..."
+          bundle exec jekyll build
+          echo "Construcción de Jekyll completada."
         env:
           JEKYLL_ENV: production
       - name: Check _site permissions
-        run: ls -la _site
+        run: |
+          echo "Verificando permisos de _site..."
+          ls -la _site
+          echo "Permisos de _site verificados."
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
+        with:
+          path: ./_site #Asegurate que el path es correcto.
+        
+        
   deploy:
     environment:
       name: github-pages
@@ -48,3 +63,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          verbose: true #habilita logs detallados.
+      - name: GitHub Pages URL
+        run: echo "GitHub Pages URL: ${{ steps.deployment.outputs.page_url }}" #imprime la url final.
