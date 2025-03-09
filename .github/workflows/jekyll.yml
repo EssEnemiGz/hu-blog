@@ -65,5 +65,3 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           verbose: true #habilita logs detallados.
-      - name: GitHub Pages URL
-        run: echo "GitHub Pages URL: ${{ steps.deployment.outputs.page_url }}" #imprime la url final.
