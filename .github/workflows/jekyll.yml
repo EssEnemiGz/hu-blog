@@ -28,10 +28,22 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Clean _site directory
+        run: rm -rf _site
+      - name: Clean bundler cache
+        run: bundle clean --force
+      - name: Install Jekyll
+        run: bundle install
+      - name: Jekyll version
+        run: jekyll --version
+      - name: Bundle doctor
+        run: bundle doctor
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - name: List _site directory
+        run: ls -l _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
