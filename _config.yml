@@ -6,6 +6,6 @@ plugins:
 collections:
   articles:
     output: true
-    permalink: /_site/:path/
+    permalink: /links/:path/
 baseurl: /hu-blog
 url: https://essenemigz.github.io
