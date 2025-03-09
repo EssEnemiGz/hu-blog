@@ -26,7 +26,7 @@
     ---
     layout: post
     title: "Título de tu artículo"
-    date: YYYY-MM-DD
+    date: DD-MM-YYYY
     ---
     ```
 
