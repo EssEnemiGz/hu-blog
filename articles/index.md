@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Acerca del blog - Indice"
+permalink: /hu-blog
 date: 09-03-2025
 ---
 
