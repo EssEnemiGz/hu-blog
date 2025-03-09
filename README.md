@@ -26,6 +26,7 @@
     ---
     layout: post
     title: "Título de tu artículo"
+    permalink: /hu-blog
     date: DD-MM-YYYY
     ---
     ```
